@@ -1,0 +1,668 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 0.5em;
+}
+
+.mt-0_5 {
+  margin-top: 0.5em;
+}
+
+.mt-0_667 {
+  margin-top: 0.667em;
+}
+
+.mt-1 {
+  margin-top: 1em;
+}
+
+.mt-1_5 {
+  margin-top: 1.5em;
+}
+
+.mt-2 {
+  margin-top: 2em;
+}
+
+.mb-0_5 {
+  margin-bottom: 0.5em;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.button {
+  background-color: rgb(21, 126, 100);
+  color: white;
+  padding: 0.66em 1em;
+  border: none;
+  border-radius: 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover:not(:disabled) {
+  background-color: rgb(37, 146, 119);
+}
+
+.button:disabled {
+  background-color: rgb(102, 102, 102);
+  color: rgb(227, 227, 227);
+}
+
+.linkbutton {
+  background: none;
+  border: none;
+  color: rgb(53, 53, 53);
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.85em;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
+.App {
+  font-family: sans-serif;
+  padding-bottom: 0.5rem;
+}
+
+.AppLogoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AppLogo {
+  height: 13vw;
+  width: auto;
+  display: block;
+}
+
+@media (min-width: 430px) {
+  .AppLogo {
+    height: 58px;
+  }
+}
+
+.AppTitleWrapper {
+  display: flex;
+  padding-left: 1vw;
+  padding-right: 2.5vw;
+  flex-direction: column;
+}
+
+.AppTitleWrapper h1 {
+  margin-top: auto;
+  font-size: 7.8vw;
+}
+
+.AppTitleSubtitle {
+  font-size: 3.1vw;
+}
+
+@media (min-width: 430px) {
+  .AppTitleWrapper {
+    padding-left: 1em;
+  }
+
+  .AppTitleWrapper h1 {
+    font-size: 2.38em;
+  }
+
+  .AppTitleSubtitle {
+    font-size: 1em;
+  }
+}
+
+.AppHeader,
+.IntroductionWrapper,
+.InviteWrapper,
+.NewChannelWrapper,
+.ChannelsWrapper,
+.SectionWrapper,
+.LegalSectionWrapper,
+.ChannelListWrapper,
+.ChannelItemWrapper,
+.AppMessageWrapper,
+.Footer {
+  padding: 0.75rem 2rem;
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.AppMessageWrapper {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.TermsOfUseAgreementContainer {
+  margin-top: 3em;
+  max-width: 30em;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #ccc;
+  border-radius: 0.333em;
+  font-size: 0.9em;
+  padding: 0.666em 1em .8em;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.TermsOfUseAgreementHeader {
+  font-size: 1.2em;
+  margin-bottom: 0.333em;
+}
+
+.NewChannelHeading {
+  font-size: 7vw;
+}
+
+@media (min-width: 315px) {
+  .NewChannelHeading {
+    font-size: 1.15em;
+  }
+}
+
+.Invite {
+  background-color: rgb(227, 235, 253);
+  padding: 1em;
+  border-radius: 0.125em;
+  border: 2px solid rgb(0, 23, 53);
+}
+
+.Invite h2 {
+  color: rgb(0, 23, 53);
+}
+
+.TextInput,
+.Textarea {
+  width: 100%;
+  padding: 0.5em 0.5em;
+}
+
+.Textarea {
+  resize: vertical;
+  border: 1px solid grey;
+}
+
+.Textarea:disabled {
+  background-color: #eceef4;
+  color: #171717;
+}
+
+.AppMessage {
+  font-weight: bold;
+  font-size: 0.9em;
+  line-height: 1em;
+  min-height: 1em;
+}
+
+.AppMessage.Success {
+  color: darkgreen;
+}
+
+.AppMessage.Info {
+  color: darkblue;
+}
+
+.AppMessage.Error {
+  color: rgb(82, 0, 38);
+}
+
+.ChannelsHeader {
+  padding-bottom: 0.5em;
+}
+
+.ChannelItem {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.ChannelItem .ChannelItemHeader {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 30rem) {
+  .ChannelItem .ChannelItemHeader {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.ChannelItem .ChannelName,
+.ChannelItem .ChannelValueLabel {
+  font-size: 0.85em;
+}
+
+.ChannelItem .ChannelItemMeta {
+  color: rgb(80, 80, 80);
+  margin-bottom: 0.5em;
+  text-align: left;
+  margin-top: 0.33em;
+}
+
+@media (min-width: 30rem) {
+  .ChannelItem .ChannelItemMeta {
+    margin-top: 0;
+    text-align: right;
+  }
+}
+
+.ValuePasswordLabel {
+  font-size: 0.85em;
+}
+
+.PricingFeaturesList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.PurchaseButton {
+  background-color: #148603;
+  color: white;
+  padding: 0.5em 2em;
+  display: inline-block;
+  border-radius: 2em;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0em;
+  border: none;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+  font-size: 1.25em;
+}
+
+.HeaderUpgradeButton {
+  font-size: .9em;
+  font-size: clamp(0.7em, 3vw, .9em);
+  background-color: #148603;
+  color: white;
+  border-radius: 2em;
+  text-decoration: none;
+}
+
+.HeaderUpgradeButton:hover {
+  background-color: #229e0e;
+}
+
+.PaymentOptions {
+  font-size: 1em;
+  font-size: clamp(.7em, 3.7vw, 1em);
+  border: 3px solid #258a2c;
+  border-radius: 3em;
+  padding: 0.8em 1em;
+  background-color: white;
+}
+
+.SelectedPaymentOption {
+  font-size: 1em;
+  padding: 0.8em 1em;
+}
+
+.PurchaseButton:hover {
+  background-color: #229e0e;
+}
+
+.SectionWrapper p,
+.SectionWrapper ul {
+  line-height: 1.125em;
+  margin-bottom: 0.5em;
+}
+
+.SubscriptionThankyou {
+  background-color: rgb(246, 255, 243);
+  border: 2px solid rgb(14, 163, 0);
+  border-radius: 15px;
+  padding: 2em 5vw;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.SubscriptionThankyou p:first-child {
+  margin-bottom: 1em;
+  color: #0b7701;
+}
+
+.LegalSectionWrapper {
+  font-size: 0.85em;
+}
+
+.LegalSectionWrapper p {
+  margin-bottom: 0.5em;
+}
+
+.LegalSectionWrapper h3 {
+  margin-bottom: 0.5em;
+  margin-top: 0.75em;
+}
+
+.QrCodeSectionWrapper {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.QrCodeWrapper {
+  margin-bottom: 1em;
+}
+
+.ChannelInfoItemLink {
+  display: grid;
+  grid-template-columns: auto 1.1em;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.ChannelInfoItemLinkIcon {
+  color: rgb(21, 126, 100);
+}
+
+.LogoLink {
+  padding: 1em 0;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+}
+
+.Footer {
+  margin-top: 3em;
+  font-size: 0.87em;
+}
+
+.Footer .LegalLinks a {
+  color: rgb(80, 80, 80);
+  text-decoration: none;
+  margin-right: 0.333em;
+}
+
+.WebAppVersion {
+  color: rgb(39, 39, 39);
+  font-size: 0.8em;
+  margin-top: 1em;
+}
+
+.WebAppVersion a {
+  color: inherit;
+}
+
+.ChannelInfoItemWrapper {
+  margin-bottom: 0.5em;
+  background-color: #e8eaf0;
+  padding: 0.75em 0.7em;
+  border-radius: 5px;
+  text-overflow: clip;
+  border: 2px solid rgb(21, 126, 100);
+  background-color: rgb(250, 255, 254);
+}
+
+.ChannelInfoItemWrapper:hover,
+.ChannelInfoItemWrapper:active,
+.ChannelInfoItemWrapper:focus {
+  background-color: rgb(230, 247, 243);
+}
+
+.WarningBanner {
+  border: 2px solid rgb(49, 5, 0);
+  background-color: rgb(240, 240, 220);
+  color: rgb(62, 16, 2);
+  padding: 0.5em 0.5em 0.7em;
+  border-radius: 0.25em;
+  line-height: 1.333;
+}
+
+.WarningBanner a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.AllChannelsLinkWrapper {
+  padding-top: 1em;
+}
+
+.OverlayShareInstructions {
+  color: white;
+  font-size: 1.1em;
+  padding: 1em;
+  text-align: center;
+}
+
+.OverlayShareInstructionsBackground {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.66);
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.ChannelControlButtons {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 0.5em;
+  row-gap: 0.5em;
+}
+
+.ChannelControlButtons .TwoColumnButton {
+  grid-column: 1 / 3;
+}
+
+.positionRelative {
+  position: relative;
+}
+
+.bottomRight {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.ChannelTypeSelection {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 1em;
+  font-size: 0.9em;
+}
+
+.ChannelTypeSelectionOption {
+  display: grid;
+  cursor: pointer;
+  grid-template-columns: max-content auto;
+  column-gap: 0.5em;
+  border: 2px solid;
+  padding: 0.5em 0.5em 0.5em 0.35em;
+}
+
+.ChannelTypeSelectionOption.selected {
+  border-color: #0060df;
+}
+
+.ChannelTypeSelectionOption label,
+.ChannelTypeSelectionOption input {
+  cursor: pointer;
+}
+
+.ChannelInviteMeta {
+  font-size: 0.9em;
+}
+
+.InvitesTableContainer h3 {
+  font-size: 0.95em;
+}
+
+.InvitesTableContainer table {
+  width: 100%;
+  font-size: 0.85em;
+  border-spacing: 0;
+}
+
+.InvitesTableContainer th {
+  text-align: left;
+  font-size: 0.95em;
+  background-color: #e2eef2;
+  padding: 0.3em 0.4em;
+}
+
+.InvitesTableContainer th:last-child {
+  text-align: center;
+}
+
+.InvitesTableContainer tr td {
+  font-size: 0.9em;
+  background-color: #f5f5f5;
+  padding: 0.2em 0.4em;
+}
+
+.InvitesTableContainer tr:nth-child(odd) td {
+  background-color: white;
+}
+
+.InvitesTableContainer tr td:last-child {
+  text-align: center;
+}
+
+.InvitesTableContainer tr td:last-child button {
+  font-size: 1.1em;
+}
+
+.BodyShadowOverlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.333);
+}
+
+.ChannelValueContainer {
+  position: relative;
+}
+
+.ChannelValueAnimationBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2e4983;
+  background: linear-gradient(0deg, #4469ae 0%, #5076ce 100%);
+  width: 100%;
+}
+
+.ChannelValueAnimationCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  overflow: hidden;
+}
+
+.ChannelValueAnimation {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
+  position: relative;
+}
+
+.ChannelValueAnimationSlider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Transition-Opacity-Transform {
+  transition: transform .7s, opacity 1s;
+}
+
+.Transition-Transform {
+  transition: transform .7s;
+}
+
+.Transition-Opacity {
+  transition: opacity 1s;
+}
+
+.Opacity-0 {
+  opacity: 0;
+}
+
+.Opacity-1 {
+  opacity: 1;
+}
+
+.Opacity-FadeIn {
+  opacity: 1;
+}
+
+.Opacity-FadeOut {
+  opacity: 0;
+}
+
+.Transform-Translate-0x0 {
+  transform: translate(0, 0);
+}
+
+.AnimatedChangeLogItem {
+  color:rgb(47 90 145);
+  animation: hue-rotate-animation 4s 3;
+}
+
+@keyframes hue-rotate-animation {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  
+  50% {
+    filter: hue-rotate(100deg);
+  }
+  
+  100% {
+    filter: hue-rotate(0deg);
+  }
+}
+
+.AppHeaderTopBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
