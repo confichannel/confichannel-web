@@ -30,7 +30,15 @@ function AboutPage() {
 				Server: <a
 					href="https://gitlab.com/confichannel/confichannel-server"
 					rel="noopener noreferrer"
-				>https://gitlab.com/confichannel/confichannel-server</a>
+				>https://gitlab.com/confichannel/confichannel-server</a><br />
+				(mirror) Web frontend: <a
+					href="https://github.com/confichannel/confichannel-web"
+					rel="noopener noreferrer"
+				>https://github.com/confichannel/confichannel-web</a><br />
+				(mirror) Server: <a
+					href="https://github.com/confichannel/confichannel-server"
+					rel="noopener noreferrer"
+				>https://github.com/confichannel/confichannel-server</a>
 			</p>
 		</div>
 		<div className='SectionWrapper'>
