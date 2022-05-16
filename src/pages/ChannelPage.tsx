@@ -73,6 +73,7 @@ function ChannelPage() {
 	const [inviteResultMessage, setInviteResultMessage] = useState<AppMessage>(emptyAppMessage);
 	const didAutoGetMessage = useRef(false);
 	const didGetInvites = useRef(false);
+	const didCheckForOutstandingInvites = useRef(false);
 	const textareaContainerRef = useRef<HTMLDivElement>(null);
 	const textareaRef = useRef<HTMLTextAreaElement>(null);
 	const [showAdvancedOptions, setShowAdvancedOptions] = useState(false);
@@ -225,6 +226,10 @@ function ChannelPage() {
 	}, [channel.channelType, channel.recipientPublicKey, fetchTempRecipientKeys, hasOutstandingInvite, skipCheckForPublicKey]);
 
 	useEffect(() => {
+		if (didCheckForOutstandingInvites.current) {
+			return;
+		}
+		didCheckForOutstandingInvites.current = true;
 		async function doCheckForOutstandingInvite() {
 			if (channel.channelType === 'bidirectional' && !channel.recipientPublicKey) {
 				try {
