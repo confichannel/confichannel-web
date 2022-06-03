@@ -920,7 +920,7 @@ function ChannelPage() {
 				channel.channelType === 'bidirectional' ? 'send and receive' : (
 					isUnidirectionReceiver ? 'receive' : 'send'
 				)
-			} confidential messages.
+			} encrypted messages.
 		</div>}
 		{justAcceptedInvite && <div className={
 			`AppMessage ${AppMessageType[AppMessageType.Success]
