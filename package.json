@@ -1,6 +1,6 @@
 {
   "name": "confichannel-web",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "private": true,
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.2",

@@ -434,10 +434,10 @@ function ChannelPage() {
 						);
 						const value = Buffer.from(valueBase64, 'base64').toString('utf8');
 						newValue = value;
-						setResultMessage({
+						resultMessage = {
 							type: AppMessageType.Success,
 							message: 'Message retrieved and decrypted',
-						});
+						};
 					} else {
 						resultMessage = {
 							type: AppMessageType.Error,

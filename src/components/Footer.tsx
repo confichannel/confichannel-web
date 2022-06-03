@@ -27,7 +27,7 @@ function Footer() {
 			</>
 		</div>
 		<div className='WebAppVersion'>
-			Version: 0.5.1{' '}
+			Version: 0.5.2{' '}
 			<AppLink href='/changelog'>Changelog</AppLink>{' '}
 			🐦
 		</div>

@@ -3,6 +3,10 @@ import React from 'react';
 function ChangelogPage() {
 	return <>
 		<div className='SectionWrapper'>
+			<h2>Version 0.5.2</h2>
+			<ul>
+				<li>Bug fix when retrieving unidirectional channel messages</li>
+			</ul>
 			<h2>Version 0.5.1</h2>
 			<ul>
 				<li className='AnimatedChangeLogItem'>Animated channel message actions</li>
